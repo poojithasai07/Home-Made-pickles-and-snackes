@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Place Order - Homemade Pickles & Snacks{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2 style="text-align: center; color: #e74c3c; margin-bottom: 2rem;">Place Your Order</h2>
+    
+    <form method="POST" style="max-width: 600px; margin: 0 auto;">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="item">Select Item</label>
+            <select id="item" name="item" required>
+                <option value="">Choose an item...</option>
+                <option value="Mango Pickle">Mango Pickle - ₹150</option>
+                <option value="Lemon Pickle">Lemon Pickle - ₹120</option>
+                <option value="Mixed Veg Pickle">Mixed Veg Pickle - ₹180</option>
+                <option value="Chicken Pickle">Chicken Pickle - ₹250</option>
+                <option value="Mutton Pickle">Mutton Pickle - ₹300</option>
+                <option value="Spicy Mixture">Spicy Mixture - ₹100</option>
+                <option value="Banana Chips">Banana Chips - ₹80</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+            <button type="submit" class="btn" style="font-size: 1.1rem; padding: 15px 40px;">Place Order</button>
+        </div>
+    </form>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+    <h3 style="text-align: center; color: #2c3e50;">Why Choose Us?</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div style="text-align: center;">
+            <h4>🏠 Homemade</h4>
+            <p>Made with love in our kitchen</p>
+        </div>
+        <div style="text-align: center;">
+            <h4>🌿 Natural</h4>
+            <p>No artificial preservatives</p>
+        </div>
+        <div style="text-align: center;">
+            <h4>🚚 Fresh Delivery</h4>
+            <p>Delivered within 24 hours</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

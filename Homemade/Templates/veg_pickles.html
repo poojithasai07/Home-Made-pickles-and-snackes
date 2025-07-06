@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Vegetarian Pickles - Homemade Pickles & Snacks{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2 style="text-align: center; color: #e74c3c; margin-bottom: 2rem;">🥒 Vegetarian Pickles</h2>
+    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: #7f8c8d;">Traditional recipes with authentic flavors, made with fresh vegetables and aromatic spices</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/IMG-20250703-WA0129.jpg') }}" alt="Mango Pickle">
+        <h3 style="color: #e74c3c;">Mango Pickle</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Sweet and tangy raw mango pickle with traditional spices</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹150</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Mango Pickle">
+            <input type="hidden" name="price" value="150">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/IMG-20250703-WA0127.jpg') }}" alt="Lemon Pickle">
+        <h3 style="color: #e74c3c;">Lemon Pickle</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Zesty lemon pickle that adds flavor to any meal</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹120</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Lemon Pickle">
+            <input type="hidden" name="price" value="120">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/mixedveg.jpg') }}" alt="Mixed Veg Pickle">
+        <h3 style="color: #e74c3c;">Mixed Vegetable Pickle</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">A delightful mix of seasonal vegetables in aromatic oil</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹180</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Mixed Vegetable Pickle">
+            <input type="hidden" name="price" value="180">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/green-chilli-pickle-recipe-360x360.jpeg') }}" alt="Green Chili Pickle">
+        <h3 style="color: #e74c3c;">Green Chili Pickle</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Spicy green chili pickle for those who love heat</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹130</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Green Chili Pickle">
+            <input type="hidden" name="price" value="130">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/garlic-pickle.jpeg') }}" alt="Garlic Pickle">
+        <h3 style="color: #e74c3c;">Garlic Pickle</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Aromatic garlic pickle with a perfect blend of spices</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹140</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Garlic Pickle">
+            <input type="hidden" name="price" value="140">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/cauliflower.jpeg') }}" alt="Cauliflower Pickle">
+        <h3 style="color: #e74c3c;">Cauliflower Pickle</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Crunchy cauliflower pickle with mustard oil and spices</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹160</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Cauliflower Pickle">
+            <input type="hidden" name="price" value="160">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; margin-top: 2rem;">
+    <h3>Why Our Vegetarian Pickles?</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div>
+            <h4>🌱 100% Vegetarian</h4>
+            <p>Made with fresh vegetables and pure vegetarian ingredients</p>
+        </div>
+        <div>
+            <h4>🏠 Traditional Recipe</h4>
+            <p>Authentic family recipes passed down through generations</p>
+        </div>
+        <div>
+            <h4>🌿 Natural Preservation</h4>
+            <p>No artificial preservatives, only natural ingredients</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

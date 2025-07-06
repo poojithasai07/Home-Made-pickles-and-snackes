@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Snacks - Homemade Pickles & Snacks{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2 style="text-align: center; color: #e74c3c; margin-bottom: 2rem;">🍿 Homemade Snacks</h2>
+    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: #7f8c8d;">Crispy, crunchy, and delicious snacks made with love and traditional recipes</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/spicy-mixture.jpeg') }}" alt="Spicy Mixture">
+        <h3 style="color: #e74c3c;">Spicy Mixture</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Crunchy mix of sev, peanuts, and spices - perfect tea-time snack</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹100</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Spicy Mixture">
+            <input type="hidden" name="price" value="100">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/bananachips.jpeg') }}" alt="Banana Chips">
+        <h3 style="color: #e74c3c;">Banana Chips</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Crispy banana chips made from fresh Kerala bananas</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹80</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Banana Chips">
+            <input type="hidden" name="price" value="80">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/spicy-masala-peanuts.jpg') }}" alt="Masala Peanuts">
+        <h3 style="color: #e74c3c;">Masala Peanuts</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Roasted peanuts with aromatic spices and herbs</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹90</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Masala Peanuts">
+            <input type="hidden" name="price" value="90">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/murukku.jpg') }}" alt="Murukku">
+        <h3 style="color: #e74c3c;">Murukku</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Traditional South Indian spiral snack, crispy and flavorful</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹120</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Murukku">
+            <input type="hidden" name="price" value="120">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Homemade Pickles & Snacks{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2 style="text-align: center; color: #e74c3c; margin-bottom: 2rem;">Get In Touch</h2>
+    
+    <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;"> 
+        <style>
+            @media (max-width: 768px) {
+                .contact-grid { grid-template-columns: 1fr !important; }
+            }
+        </style>
+        <div>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+        
+        <div>
+            <h3 style="color: #2c3e50; margin-bottom: 1rem;">Contact Information</h3>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="color: #e74c3c;">📍 Address</h4>
+                <p>123 Homemade Street<br>Flavor Town, FT 12345</p>
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="color: #e74c3c;">📞 Phone</h4>
+                <p>+91 98765 43210</p>
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="color: #e74c3c;">✉️ Email</h4>
+                <p>hello@homemadedelights.com</p>
+            </div>
+            
+            <div>
+                <h4 style="color: #e74c3c;">🕒 Business Hours</h4>
+                <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: 10:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); text-align: center;">
+    <h3 style="color: #2c3e50;">We'd Love to Hear From You!</h3>
+    <p style="margin: 1rem 0;">Have questions about our products? Want to place a custom order? Or just want to say hello? Drop us a message and we'll get back to you as soon as possible.</p>
+</div>
+{% endblock %}

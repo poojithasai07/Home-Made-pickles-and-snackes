@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Non-Vegetarian Pickles - Homemade Pickles & Snacks{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2 style="text-align: center; color: #e74c3c; margin-bottom: 2rem;">🍖 Non-Vegetarian Pickles</h2>
+    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: #7f8c8d;">Rich and flavorful meat pickles prepared with premium ingredients and traditional spices</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/chicken-pickle.jpg') }}" alt="Chicken Pickle">
+        <h3 style="color: #e74c3c;">Chicken Pickle</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Tender chicken pieces marinated in aromatic spices and oil</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹250</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Chicken Pickle">
+            <input type="hidden" name="price" value="250">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/mutton.jpeg') }}" alt="Mutton Pickle">
+        <h3 style="color: #e74c3c;">Mutton Pickle</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Premium mutton pickle with rich flavors and traditional taste</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹300</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Mutton Pickle">
+            <input type="hidden" name="price" value="300">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/fish-pickle.png') }}" alt="Fish Pickle">
+        <h3 style="color: #e74c3c;">Fish Pickle</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Fresh fish pickle with coastal spices and tangy flavors</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹220</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Fish Pickle">
+            <input type="hidden" name="price" value="220">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+    
+    <div class="card" style="text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+        <div style="font-size: 3rem; margin-bottom: 1rem;"></div>
+        <img src="{{ url_for('static', filename='images/Prawnpickle.jpg') }}" alt="prawn Pickle">
+        <h3 style="color: #e74c3c;">Prawn Pickle</h3>
+        <p style="margin: 1rem 0; color: #7f8c8d;">Succulent prawns in spicy pickle with coconut oil</p>
+        <div style="font-size: 1.2rem; font-weight: bold; color: #27ae60; margin: 1rem 0;">₹280</div>
+        <form method="POST" action="{{ url_for('add_to_cart') }}" style="display: inline;">
+            <input type="hidden" name="item_name" value="Prawn Pickle">
+            <input type="hidden" name="price" value="280">
+            <button type="submit" class="btn">Add to Cart</button>
+        </form>
+    </div>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); text-align: center; margin-top: 2rem;">
+    <h3 style="color: #2c3e50;">Premium Non-Veg Pickles</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div>
+            <h4 style="color: #e74c3c;">🥩 Fresh Meat</h4>
+            <p>Only the finest cuts of meat and seafood</p>
+        </div>
+        <div>
+            <h4 style="color: #e74c3c;">🌶️ Authentic Spices</h4>
+            <p>Traditional spice blends for rich flavors</p>
+        </div>
+        <div>
+            <h4 style="color: #e74c3c;">❄️ Fresh Preparation</h4>
+            <p>Made fresh to order with proper preservation</p>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="background: #fff3cd; border: 1px solid #ffeaa7;">
+    <h3 style="color: #856404; text-align: center;">⚠️ Important Note</h3>
+    <p style="color: #856404; text-align: center; margin: 1rem 0;">Non-vegetarian pickles require 24-48 hours preparation time. Please place your order in advance. All meat products are sourced from certified suppliers and prepared in hygienic conditions.</p>
+</div>
+{% endblock %}

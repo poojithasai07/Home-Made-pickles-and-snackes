@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up - Homemade Pickles & Snacks{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 500px; margin: 2rem auto;">
+    <h2 style="text-align: center; color: #e74c3c; margin-bottom: 2rem;">Create Your Account</h2>
+    
+    <form method="POST">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
+        </div>
+        
+        <div style="margin: 1rem 0;">
+            <label style="display: flex; align-items: center; font-weight: normal;">
+                <input type="checkbox" required style="margin-right: 0.5rem; width: auto;">
+                I agree to the <a href="#" style="color: #e74c3c;">Terms of Service</a> and <a href="#" style="color: #e74c3c;">Privacy Policy</a>
+            </label>
+        </div>
+        
+        <button type="submit" class="btn" style="width: 100%; margin-bottom: 1rem;">Create Account</button>
+    </form>
+    
+    <div style="text-align: center; padding-top: 1rem; border-top: 1px solid #eee;">
+        <p>Already have an account? <a href="{{ url_for('login') }}" style="color: #e74c3c; text-decoration: none; font-weight: bold;">Login here</a></p>
+    </div>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); text-align: center;">
+    <h3 style="color: #2c3e50;">Welcome to Homemade Delights!</h3>
+    <p style="margin: 1rem 0; color: #2c3e50;">Create your account to start your delicious journey with us. After signing up, you'll be redirected to login and then to our home page.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div>
+            <h4>🎯 Exclusive Offers</h4>
+            <p>Get special discounts and early access to new products</p>
+        </div>
+        <div>
+            <h4>📦 Order Tracking</h4>
+            <p>Track your orders from kitchen to doorstep</p>
+        </div>
+        <div>
+            <h4>❤️ Wishlist</h4>
+            <p>Save your favorite items for quick reordering</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

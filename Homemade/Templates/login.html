@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Homemade Pickles & Snacks{% endblock %}
+
+{% block content %}
+<div class="card" style="max-width: 400px; margin: 2rem auto;">
+    <h2 style="text-align: center; color: #e74c3c; margin-bottom: 2rem;">Welcome Back</h2>
+    
+    <form method="POST">
+        <div class="form-group">
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin: 1rem 0;">
+            <label style="display: flex; align-items: center; font-weight: normal;">
+                <input type="checkbox" style="margin-right: 0.5rem; width: auto;">
+                Remember me
+            </label>
+            <a href="#" style="color: #e74c3c; text-decoration: none;">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="btn" style="width: 100%; margin-bottom: 1rem;">Login</button>
+    </form>
+    
+    <div style="text-align: center; padding-top: 1rem; border-top: 1px solid #eee;">
+        <p>Don't have an account? <a href="{{ url_for('signup') }}" style="color: #e74c3c; text-decoration: none; font-weight: bold;">Sign up here</a></p>
+    </div>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+    <h3>Welcome Back!</h3>
+    <p style="margin: 1rem 0;">Login to access your account and explore our delicious homemade products. After login, you'll be taken to our home page.</p>
+    <div style="margin-top: 1rem;">
+        <p style="font-size: 0.9rem;">New here? <a href="{{ url_for('signup') }}" style="color: #ffd700; text-decoration: underline;">Create an account first</a></p>
+    </div>
+</div>
+{% endblock %}

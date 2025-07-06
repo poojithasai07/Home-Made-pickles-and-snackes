@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Success - Homemade Pickles & Snacks{% endblock %}
+
+{% block content %}
+<div class="card" style="text-align: center; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+    <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
+    <h1 style="color: #27ae60; margin-bottom: 1rem;">Success!</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #2c3e50;">Your request has been processed successfully.</p>
+    
+    <div style="background: white; padding: 2rem; border-radius: 10px; margin: 2rem 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        <h3 style="color: #2c3e50; margin-bottom: 1rem;">What's Next?</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div>
+                <h4 style="color: #e74c3c;">📧 Check Your Email</h4>
+                <p>You'll receive a confirmation email shortly</p>
+            </div>
+            <div>
+                <h4 style="color: #e74c3c;">📱 Stay Updated</h4>
+                <p>We'll send you updates via SMS and email</p>
+            </div>
+            <div>
+                <h4 style="color: #e74c3c;">🚚 Track Delivery</h4>
+                <p>Your order will be delivered within 24-48 hours</p>
+            </div>
+        </div>
+    </div>
+    
+    <div style="margin-top: 2rem;">
+        <a href="{{ url_for('index') }}" class="btn" style="margin: 0.5rem;">Back to Home</a>
+        <a href="{{ url_for('order') }}" class="btn" style="margin: 0.5rem; background: linear-gradient(45deg, #3498db, #2980b9);">Place Another Order</a>
+    </div>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); text-align: center;">
+    <h3 style="color: #2c3e50;">Thank You for Choosing Us!</h3>
+    <p style="margin: 1rem 0;">We appreciate your business and look forward to serving you again. Don't forget to follow us on social media for updates and special offers!</p>
+    
+    <div style="margin-top: 1rem;">
+        <span style="font-size: 1.5rem; margin: 0 0.5rem;">📘</span>
+        <span style="font-size: 1.5rem; margin: 0 0.5rem;">📷</span>
+        <span style="font-size: 1.5rem; margin: 0 0.5rem;">🐦</span>
+    </div>
+</div>
+{% endblock %}

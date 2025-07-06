@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Homemade Pickles & Snacks{% endblock %}
+
+{% block content %}
+<div class="card" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); text-align: center; padding: 3rem 2rem;">
+    <h1 style="font-size: 3.5rem; margin-bottom: 1rem; color: #2c3e50;">🏠 Welcome Home</h1>
+    <p style="font-size: 1.3rem; margin-bottom: 2rem; color: #34495e;">Where every bite feels like home</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="{{ url_for('veg_pickles') }}" class="btn" style="font-size: 1.1rem;">Explore Pickles</a>
+        <a href="{{ url_for('snacks') }}" class="btn" style="background: linear-gradient(45deg, #3498db, #2980b9);">Browse Snacks</a>
+    </div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin: 2rem 0;">
+    <div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+        <h3 style="margin-bottom: 1rem;">🥒 Featured Pickles</h3>
+        <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+            <h4>Mango Pickle Special</h4>
+            <p style="margin: 0.5rem 0;">Our signature mango pickle made with handpicked raw mangoes</p>
+            <span style="font-size: 1.2rem; font-weight: bold;">₹150</span>
+        </div>
+        <a href="{{ url_for('order') }}" class="btn" style="background: white; color: #667eea;">Order Now</a>
+    </div>
+    
+    <div class="card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
+        <h3 style="margin-bottom: 1rem; color: #2c3e50;">🍿 Snack of the Day</h3>
+        <div style="background: rgba(255,255,255,0.7); padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+            <h4 style="color: #2c3e50;">Spicy Mixture Combo</h4>
+            <p style="margin: 0.5rem 0; color: #2c3e50;">Perfect blend of sev, peanuts, and aromatic spices</p>
+            <span style="font-size: 1.2rem; font-weight: bold; color: #27ae60;">₹100</span>
+        </div>
+        <a href="{{ url_for('order') }}" class="btn">Try Today</a>
+    </div>
+</div>
+
+<div class="card">
+    <h3 style="text-align: center; color: #e74c3c; margin-bottom: 2rem;">What Makes Us Special</h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div style="text-align: center; padding: 1rem;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">👵</div>
+            <h4 style="color: #2c3e50;">Grandma's Recipes</h4>
+            <p style="color: #7f8c8d;">Traditional family recipes that have been perfected over generations</p>
+        </div>
+        
+        <div style="text-align: center; padding: 1rem;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🌿</div>
+            <h4 style="color: #2c3e50;">Natural Ingredients</h4>
+            <p style="color: #7f8c8d;">Only the finest natural ingredients with no artificial preservatives</p>
+        </div>
+        
+        <div style="text-align: center; padding: 1rem;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">❤️</div>
+            <h4 style="color: #2c3e50;">Made with Love</h4>
+            <p style="color: #7f8c8d;">Every product is crafted with care and attention to detail</p>
+        </div>
+        
+        <div style="text-align: center; padding: 1rem;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🚚</div>
+            <h4 style="color: #2c3e50;">Fresh Delivery</h4>
+            <p style="color: #7f8c8d;">Quick delivery ensures you get the freshest products</p>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); text-align: center;">
+    <h3 style="color: #2c3e50; margin-bottom: 1rem;">Customer Favorites</h3>
+    <p style="margin-bottom: 2rem; color: #34495e;">See what our customers love the most</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <div style="background: white; padding: 1rem; border-radius: 10px;">
+            <h4 style="color: #e74c3c;">⭐ 4.9/5</h4>
+            <p style="color: #2c3e50;">Mango Pickle</p>
+        </div>
+        <div style="background: white; padding: 1rem; border-radius: 10px;">
+            <h4 style="color: #e74c3c;">⭐ 4.8/5</h4>
+            <p style="color: #2c3e50;">Spicy Mixture</p>
+        </div>
+        <div style="background: white; padding: 1rem; border-radius: 10px;">
+            <h4 style="color: #e74c3c;">⭐ 4.7/5</h4>
+            <p style="color: #2c3e50;">Chicken Pickle</p>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="background: #d4edda; border: 1px solid #c3e6cb;">
+    <h3 style="color: #155724; text-align: center;">🎉 Special Offer</h3>
+    <p style="color: #155724; text-align: center; margin: 1rem 0; font-size: 1.1rem;">Get 20% off on your first order! Use code: <strong>WELCOME20</strong></p>
+    <div style="text-align: center;">
+        <a href="{{ url_for('order') }}" class="btn" style="background: linear-gradient(45deg, #28a745, #20c997);">Claim Offer</a>
+    </div>
+</div>
+{% endblock %}
